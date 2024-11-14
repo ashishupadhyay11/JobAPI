@@ -10,17 +10,8 @@ connectDatabase();
 
 //Setup body parser
 app.use(express.json());
-//creating a middleware (present globally)
-// const middleware =(req,res,next)=>{
-//     console.log('Hello from middleware.')
 
-//     //setting a global variable
-//     req.requestMethod = req.url;
-//     next();
-// }
-// app.use(middleware);
 
-//Importing routes
 const jobs = require('./Routes/jobs.js')
 
 
