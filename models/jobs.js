@@ -44,7 +44,7 @@ const jobSchema = new mongoose.Schema({
     },
     industry:{
         type:[String], //could be related to multiple industries
-        required: true,
+        required: [true , 'Please enter valid industry type for the job!'],
         enum : {
             values:[
                 'IT',
@@ -58,7 +58,7 @@ const jobSchema = new mongoose.Schema({
     },
     jobType:{
         type: String,
-        required: true,
+        required: [true, 'Please enter valid job type!'],
         enum:{
             values:[
                 'Full-time',
@@ -70,7 +70,7 @@ const jobSchema = new mongoose.Schema({
     },
     minEducation:{
         type:  String,
-        required: true,
+        required: [true, 'Please enter minimum education requirement for the job!'],
         enum:{
             values:[
                 'Bachelors',
@@ -86,7 +86,7 @@ const jobSchema = new mongoose.Schema({
     },
     experience:{
         type : String,
-        required: true,
+        required: [true,'Please enter the required exp level'],
         enum:{
             values:[
                 '0-1 year',
